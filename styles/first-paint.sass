@@ -1,0 +1,47 @@
+@import 'mixins'
+
+.header 
+	background-color: var(--background-color)
+	&-top
+		--p-font-size: 16px
+		--p-font-weight: 400
+		background-color: #000000
+		padding: 8px 0 11px
+		&-wrapper
+			display: flex
+			align-items: center
+	&-info
+		display: flex
+		align-items: center
+		margin-right: 50px
+		&:nth-child(2)
+			margin-right: 30px
+		.marker 
+			margin-right: 8px
+	&-language
+		display: flex
+		align-items: center
+		margin-left: auto
+		&-info
+			--p-font-size: 14px
+			display: flex
+			align-items: center
+			align-content: center
+			justify-content: center
+			margin-right: 15px
+			img 
+				margin-right: 8px
+	&-navigation
+		background-color: #212121
+	&-main
+		padding: 20px 0 24px
+.logo
+	display: flex
+	align-items: center
+	align-content: center
+	justify-content: flex-start
+	span
+		font-size: 10px
+		line-height: 13px
+		font-weight: 400
+		padding-left: 15px
