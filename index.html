@@ -8,14 +8,14 @@
 			<meta name="author" content="John Doe">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 			<link rel="stylesheet" href="./styles/default.css" />
-			<link rel="stylesheet" href="./styles/first-paint.css" />
+			<link rel="stylesheet" href="./styles/select2.min.css" />
 			<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+			<link rel="stylesheet" href="./styles/first-paint.css" />
 			<link rel="stylesheet" href="./styles/styles.css" /> 
 	</head>
-	<body>
-
+	<body class="nome">
 		<header class="header">
-			<div class="header-top">
+			<div class="header-top desktop">
 				<div class="container header-top-wrapper">
 					<div class="header-info">
 						<img class="marker" src="./assets/marker.svg" alt="Адрес">
@@ -37,7 +37,7 @@
 							<img src="./assets/language.svg" alt="Перевести">
 							<p>Перевести</p>
 						</div>
-						<select name="" id="">
+						<select class="lang" name="lang-mobile">
 							<option value="">Ru</option>
 							<option value="">En</option>
 						</select>
@@ -51,7 +51,48 @@
 						<span>ПРОИЗВОДСТВО <br/> КАЛЬЯНОВ <br/> И АКСЕССУАРОВ</span>
 					</a>
 					<form action="" class="search-form">
+						<!-- class="active" for input open search wrapper -->
 						<input type="text" placeholder="Поиск по сайту">
+						<div class="search-wrapper">
+							<ul class="search-list">
+								<li class="search-listitem">
+									<a href="">
+										<figure class="cart_item-image">
+											<img src="./assets/hookah-1.png">
+										</figure>
+										<p class="cart_item-name">Колба «Bamboo Hookah»<br>«UFO» (серебро)</p>
+										<span class="prices">
+											<h5 class="product-price-new">5 990 ₽</h5>
+											<strike class="product-price-old">8 990 ₽</strike>
+										</span>
+									</a>
+								</li>
+								<li class="search-listitem">
+									<a href="">
+										<figure class="cart_item-image">
+											<img src="./assets/hookah-1.png">
+										</figure>
+										<p class="cart_item-name">Колба «Bamboo Hookah»<br>«UFO» (серебро)</p>
+										<span class="prices">
+											<h5 class="product-price-current">5 990 ₽</h5>
+										</span>
+									</a>
+								</li>
+								<li class="search-listitem">
+									<a href="">
+										<figure class="cart_item-image">
+											<img src="./assets/hookah-1.png">
+										</figure>
+										<p class="cart_item-name">Колба «Bamboo Hookah»<br>«UFO» (серебро)</p>
+										<span class="prices">
+											<h5 class="product-price-new">5 990 ₽</h5>
+											<strike class="product-price-old">8 990 ₽</strike>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+
 						<button class="search-form-button">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
 								<mask id="a" width="20" height="20" x="2" y="2" maskUnits="userSpaceOnUse" style="mask-type:alpha">
@@ -63,25 +104,108 @@
 							</svg>	
 						</button>
 					</form>
-					<div class="user-controls">
-						<a href="">
-							<img src="./assets/cart.svg" alt="">
-							<span>0</span>
-						</a>
-						<a href="">
-							<img src="./assets/user.svg" alt="">
-						</a>
+					<ul class="user-controls">
+						<li class="cart">
+							<a href="">
+								<img src="./assets/cart.svg" alt="">
+								<span class="items">0</span>
+							</a>
+							<div class="cart_items-wrapper">
+                <ul class="cart_list">
+                  <li class="cart_list-item">
+                  	<a href="">
+											<figure class="cart_item-image">
+												<img src="./assets/hookah-1.png">
+											</figure>
+											<p class="cart_item-name">Колба «Bamboo Hookah»<br>«UFO» (серебро)</p>
+											<span class="prices">
+												<h5 class="product-price-new">5 990 ₽</h5>
+												<strike class="product-price-old">8 990 ₽</strike>
+											</span>
+										</a>
+                    <button class="remove_list-item">
+                    	<img src="./assets/remove.svg" alt="">
+                    </button>
+                  </li>
+                  <li class="cart_list-item">
+                  	<a href="">
+											<figure class="cart_item-image">
+												<img src="./assets/hookah-1.png">
+											</figure>
+											<p class="cart_item-name">Колба «Bamboo Hookah»<br>«UFO» (серебро)</p>
+											<span class="prices">
+												<h5 class="product-price-current">5 990 ₽</h5>
+											</span>
+										</a>
+                    <button class="remove_list-item">
+                    	<img src="./assets/remove.svg" alt="">
+                    </button>
+                  </li>
+                  <li class="cart_list-item">
+                  	<a href="">
+											<figure class="cart_item-image">
+												<img src="./assets/hookah-1.png">
+											</figure>
+											<p class="cart_item-name">Колба «Bamboo Hookah»<br>«UFO» (серебро)</p>
+											<span class="prices">
+												<h5 class="product-price-new">5 990 ₽</h5>
+												<strike class="product-price-old">8 990 ₽</strike>
+											</span>
+										</a>
+                    <button class="remove_list-item">
+                    	<img src="./assets/remove.svg" alt="">
+                    </button>
+                  </li>
+                  <li class="cart_list-item">
+                  	<a href="">
+											<figure class="cart_item-image">
+												<img src="./assets/hookah-1.png">
+											</figure>
+											<p class="cart_item-name">Колба «Bamboo Hookah»<br>«UFO» (серебро)</p>
+											<span class="prices">
+												<h5 class="product-price-current">5 990 ₽</h5>
+											</span>
+										</a>
+                    <button class="remove_list-item">
+                    	<img src="./assets/remove.svg" alt="">
+                    </button>
+                  </li>
+                  </li>
+                </ul>
+                <div class="cart-footer">
+                  <div class="result">
+                  	<p>Итого:</p>
+                  	<h3>27 960 ₽</h3>
+                  </div>
+                	<a class="button go_to_cart" href="">Перейти в корзину</a>
+                </div>
+						</li>
+						<li>
+							<a href="">
+								<img src="./assets/user.svg" alt="">
+							</a>
+						</li>
 					</div>
 				</div>
 			</div>
 			<div class="header-navigation">
 				<div class="container header-navigation-wrapper">
+					<button id="menu" class="mobile-menu-button">
+						<span class="burger"></span>
+						МЕНЮ 
+					</button>
 					<div class="header-catalog">
-						<button class="catalog-button">
+						<button id="catalog" class="catalog-button">
 							<span class="burger"></span>
 							КАТАЛОГ 
 						</button>
-						<ul class="submenu">
+						<ul class="submenu home">
+							<li class="sticky">
+								<button id="close-catalog" class="close-catalog-button">
+									<span class="close"></span>
+									ЗАКРЫТЬ КАТАЛОГ
+								</button>
+							</li>
 							<li><a href="">Кальяны</a></li>
 							<li><a href="">Колбы</a></li>
 							<li><a href="">Мундштуки</a></li>
@@ -94,6 +218,10 @@
 						</ul>
 					</div>
 					<nav class="header-menu">
+						<button id="close-menu" class="close-mobile-menu-button sticky">
+							<span class="close"></span>
+							ЗАКРЫТЬ МЕНЮ 
+						</button>
 						<ul>
 							<li class="header-yellow">
 								<a href="">
@@ -112,6 +240,35 @@
 							<li>
 								<a href="">Контакты</a>
 							</li>
+							<li class="header-top mobile">
+								<div class="header-top-wrapper">
+									<div class="header-info">
+										<p>Россия, г. Казань, ул. Декабристов, 113</p>
+									</div>
+									<div class="header-info">
+										<p>Пн-Пт: 10.00 — 19.00, Сб-Вс: выходной</p>
+									</div>
+									<div class="header-info">
+										<div class="header-language">
+											<div class="header-language-info">
+												<img src="./assets/language.svg" alt="Перевести">
+												<p>Перевести</p>
+											</div>
+											<select class="lang" name="lang-mobile">
+												<option value="">Ru</option>
+												<option value="">En</option>
+											</select>
+										</div>
+										<a class="instagram" href="">
+											<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none">
+												<path fill="#fff" d="M10.8135 1.95351c2.8885 0 3.2223.01457 4.369.05831 1.0596.04373 1.6256.21868 2.003.37904.508.2041.8709.43735 1.2483.81639.3774.37904.6096.7435.8128 1.25374.1452.37904.3194.96218.3774 2.01182.0581 1.1517.0581 1.487.0581 4.38809 0 2.9011-.0145 3.2364-.0581 4.3881-.0435 1.0642-.2177 1.6328-.3774 2.0118-.2032.5103-.4354.8747-.8128 1.2538-.3774.379-.7403.6123-1.2483.8164-.3774.1458-.9579.3207-2.003.379-1.1467.0583-1.4805.0583-4.369.0583-2.88841 0-3.22226-.0146-4.36893-.0583-1.05958-.0437-1.62566-.2187-2.00304-.379-.50802-.2041-.87089-.4374-1.24827-.8164-.37739-.3791-.60963-.7435-.81284-1.2538-.14514-.379-.31932-.9621-.37738-2.0118-.05806-1.1517-.05806-1.487-.05806-4.3881 0-2.90109.01452-3.23639.05806-4.38809.04355-1.06422.21772-1.63278.37738-2.01182.20321-.51024.43545-.8747.81284-1.25374.37738-.37904.74025-.61229 1.24827-.81639.37738-.14579.95797-.32073 2.00304-.37904 1.14667-.04374 1.48052-.05831 4.36893-.05831Zm0-1.95351C7.88154 0 7.50416.0145781 6.35748.0583133 5.21081.116627 4.42701.291568 3.7303.568558 3.01907.845547 2.40946 1.21001 1.81435 1.8223 1.21924 2.42002.841854 3.03231.566072 3.74665c-.261266.68519-.449959 1.487-.5080181 2.63869C-.0000053 7.53704 0 7.91607 0 10.8609c0 2.9449.0145095 3.3239.0580539 4.4756.0580591 1.1517.2322371 1.9389.5080181 2.6387.275782.7143.638658 1.3266 1.248278 1.9243.59511.5977 1.20472.9768 1.91595 1.2538.6822.2624 1.48051.4519 2.62718.5102 1.14668.0583 1.52406.0583 4.45602.0583 2.932 0 3.3094-.0146 4.4561-.0583 1.1466-.0583 1.9304-.2332 2.6272-.5102.7112-.277 1.3208-.6415 1.9159-1.2538.5951-.5977.9725-1.21 1.2483-1.9243.2613-.6852.4499-1.487.508-2.6387.0581-1.1517.0581-1.5307.0581-4.4756 0-2.94483-.0146-3.32386-.0581-4.47556-.0581-1.15169-.2322-1.93893-.508-2.63869-.2758-.71434-.6387-1.32663-1.2483-1.92435-.5951-.59771-1.2047-.976753-1.9159-1.253742-.6822-.262412-1.4806-.451931-2.6272-.5102447C14.1229.0145781 13.76 0 10.8135 0Z"/>
+												<path fill="#fff" d="M10.8137 5.27734c-3.06262 0-5.54466 2.49291-5.54466 5.56896 0 3.076 2.48204 5.5689 5.54466 5.5689 3.0626 0 5.5447-2.4929 5.5447-5.5689 0-3.07605-2.4676-5.56896-5.5447-5.56896Zm0 9.19896c-1.98853 0-3.59968-1.6182-3.59968-3.6154 0-1.99727 1.61115-3.61547 3.59968-3.61547 1.9885 0 3.5997 1.6182 3.5997 3.61547 0 1.9972-1.6112 3.6154-3.5997 3.6154ZM16.5906 6.35619c.7135 0 1.2919-.5809 1.2919-1.29748s-.5784-1.29748-1.2919-1.29748c-.7134 0-1.2918.5809-1.2918 1.29748s.5784 1.29748 1.2918 1.29748Z"/>
+											</svg>
+										</a>
+									</div>
+									
+								</div>
+							</div>
 						</ul>
 					</div>
 				</div>
@@ -141,9 +298,9 @@
 								</div>
 							</div>
 							<div class="swiper-navigation">
-								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-prev prev-slide"></div>
 								<div class="swiper-pagination"></div>
-								<div class="swiper-button-next"></div>
+								<div class="swiper-button-next next-slide"></div>
 							</div>		
 						</div>
 					</div>
@@ -151,16 +308,300 @@
 			</div>
 			<div class="advantages">
 				<div class="container advantages-wrapper">
-					
+					<div class="advantage">
+						<img src="./assets/advantage-1.svg" alt="Большой ассортимент">
+						<div class="advantage-info">
+							<h6 class="advantage-title">Большой ассортимент</h6>
+							<p class="advantage-description">У нас ты найдёшь все, что нужно для кальяна</p>
+						</div>
+					</div>
+					<div class="advantage">
+						<img src="./assets/advantage-2.svg" alt="Индивидуальный подход">
+						<div class="advantage-info">
+							<h6 class="advantage-title">Индивидуальный подход</h6>
+							<p class="advantage-description">Предоставляем скидки для друзей и постоянных клиентов</p>
+						</div>
+					</div>
+					<div class="advantage">
+						<img src="./assets/advantage-3.svg" alt="Высокое качество">
+						<div class="advantage-info">
+							<h6 class="advantage-title">Высокое качество</h6>
+							<p class="advantage-description">В нашем магазине только проверенная продукция</p>
+						</div>
+					</div>
 				</div>
 			</div>
-			
+			<div class="block-slider">
+				<div class="container block-slider-wrapper">
+					<h2 class="block-slider-title">Лидеры продаж</h2>
+					<div class="products-slider">
+						<div class="swiper-wrapper">
+
+							<div class="product swiper-slide discount">
+								<div class="product-image">
+									<img src="./assets/hookah-1.png" alt="">
+								</div>
+								<div class="product-info">
+									<h6 class="product-title">Кальян «Bamboo Hookah» (серебро)</h6>
+									<div class="product-price">
+										<h5 class="product-price-new">5 990 ₽</h5>
+										<strike class="product-price-old">8 990 ₽</strike>
+									</div>
+									<a href="" class="button">
+										<img src="./assets/button-cart.svg" alt="">
+										В корзину
+									</a>
+								</div>
+							</div>
+							<div class="product swiper-slide bamboo">
+								<div class="product-image">
+									<img src="./assets/hookah-2.png" alt="">
+								</div>
+								<div class="product-info">
+									<h6 class="product-title">Кальян «Bamboo Hookah» (серебро)</h6>
+									<div class="product-price">
+										<h5 class="product-price-current">5 990 ₽</h5>
+									</div>
+									<a href="" class="button">
+										<img src="./assets/button-cart.svg" alt="">
+										В корзину
+									</a>
+								</div>
+							</div>
+							<div class="product swiper-slide discount">
+								<div class="product-image">
+									<img src="./assets/hookah-1.png" alt="">
+								</div>
+								<div class="product-info">
+									<h6 class="product-title">Кальян «Bamboo Hookah» (серебро)</h6>
+									<div class="product-price">
+										<h5 class="product-price-new">5 990 ₽</h5>
+										<strike class="product-price-old">8 990 ₽</strike>
+									</div>
+									<a href="" class="button">
+										<img src="./assets/button-cart.svg" alt="">
+										В корзину
+									</a>
+								</div>
+							</div>
+							<div class="product swiper-slide bamboo">
+								<div class="product-image">
+									<img src="./assets/hookah-2.png" alt="">
+								</div>
+								<div class="product-info">
+									<h6 class="product-title">Кальян «Bamboo Hookah» (серебро)</h6>
+									<div class="product-price">
+										<h5 class="product-price-current">5 990 ₽</h5>
+									</div>
+									<a href="" class="button">
+										<img src="./assets/button-cart.svg" alt="">
+										В корзину
+									</a>
+								</div>
+							</div>
+							<div class="product swiper-slide">
+								<div class="product-image">
+									<img src="./assets/hookah-1.png" alt="">
+								</div>
+								<div class="product-info">
+									<h6 class="product-title">Кальян «Bamboo Hookah» (серебро)</h6>
+									<div class="product-price">
+										<h5 class="product-price-current">5 990 ₽</h5>
+									</div>
+									<a href="" class="button">
+										<img src="./assets/button-cart.svg" alt="">
+										В корзину
+									</a>
+								</div>
+							</div>
+
+
+						</div>
+						<div class="swiper-button-prev product-prev"></div>
+						<div class="product-pagination"></div>
+						<div class="swiper-button-next product-next"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-slider">
+				<div class="container block-slider-wrapper">
+					<h2 class="block-slider-title">Новинки</h2>
+					<div class="products-slider">
+						<div class="swiper-wrapper">
+
+							<div class="product swiper-slide discount">
+								<div class="product-image">
+									<img src="./assets/new1.png" alt="">
+								</div>
+								<div class="product-info">
+									<h6 class="product-title">Кальян «Bamboo Hookah» (серебро)</h6>
+									<div class="product-price">
+										<h5 class="product-price-new">5 990 ₽</h5>
+										<strike class="product-price-old">8 990 ₽</strike>
+									</div>
+									<a href="" class="button">
+										<img src="./assets/button-cart.svg" alt="">
+										В корзину
+									</a>
+								</div>
+							</div>
+							<div class="product swiper-slide">
+								<div class="product-image">
+									<img src="./assets/new2.png" alt="">
+								</div>
+								<div class="product-info">
+									<h6 class="product-title">Кальян «Bamboo Hookah» (серебро)</h6>
+									<div class="product-price">
+										<h5 class="product-price-current">5 990 ₽</h5>
+									</div>
+									<a href="" class="button">
+										<img src="./assets/button-cart.svg" alt="">
+										В корзину
+									</a>
+								</div>
+							</div>
+							<div class="product swiper-slide discount">
+								<div class="product-image">
+									<img src="./assets/new3.png" alt="">
+								</div>
+								<div class="product-info">
+									<h6 class="product-title">Кальян «Bamboo Hookah» (серебро)</h6>
+									<div class="product-price">
+										<h5 class="product-price-new">5 990 ₽</h5>
+										<strike class="product-price-old">8 990 ₽</strike>
+									</div>
+									<a href="" class="button">
+										<img src="./assets/button-cart.svg" alt="">
+										В корзину
+									</a>
+								</div>
+							</div>
+							<div class="product swiper-slide">
+								<div class="product-image">
+									<img src="./assets/new4.png" alt="">
+								</div>
+								<div class="product-info">
+									<h6 class="product-title">Кальян «Bamboo Hookah» (серебро)</h6>
+									<div class="product-price">
+										<h5 class="product-price-current">5 990 ₽</h5>
+									</div>
+									<a href="" class="button">
+										<img src="./assets/button-cart.svg" alt="">
+										В корзину
+									</a>
+								</div>
+							</div>
+							<div class="product swiper-slide">
+								<div class="product-image">
+									<img src="./assets/new5.png" alt="">
+								</div>
+								<div class="product-info">
+									<h6 class="product-title">Кальян «Bamboo Hookah» (серебро)</h6>
+									<div class="product-price">
+										<h5 class="product-price-current">5 990 ₽</h5>
+									</div>
+									<a href="" class="button">
+										<img src="./assets/button-cart.svg" alt="">
+										В корзину
+									</a>
+								</div>
+							</div>
+							
+						</div>
+						<div class="swiper-button-prev product-prev"></div>
+						<div class="product-pagination"></div>
+						<div class="swiper-button-next product-next"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="home-text">
+				<div class="container home-text-wrapper">
+					<h2 class="home-text-title">Кальяны в нашем магазине</h2>
+					<div class="text-wrapper">
+						<p>
+							Вы задаетесь вопросом — где можно купить кальяны, чаши, колбы и другие аксессуары? Ответ достаточно прост — посетите магазин кальянов — Bamboo Hookah. Адрес наших отделов в Казани — ул. Декабристов, 113 (вход с ул. Лушникова), часы работы— 12:00-19:00.
+						</p>
+						<p>
+							Вы также можете позвонить нам по телефону +7(965)404-19-78 и мы ответим на интересующие вас вопросы. А наши продавцы-консультанты в магазине расскажут подробно о любом, интересующем вас товаре, помогут определиться вам с выбором.
+						</p>
+						<p>
+							Достаточно лишь раз посетить Bamboo Hookag, чтобы понять: широта и уникальность нашего ассортимента, а также выгодные цены не оставят вас равнодушными. Поэтому не стоит думать и гадать — у нас вы сможете купить кальяны в Казани или сделать заказ через наш интернет-магазин по самым лучшим ценам в городе. Bamboo Hookah — прими правильное решение, чтобы потом не жалеть!
+						</p>
+					</div>
+				</div>
+			</div>
 		</main>
 
 		<footer class="footer">
-			
+			<div class="container">
+				<div class="footer-top">
+					<a href="" class="footer-logo">
+						<img src="./assets/footer-logo.svg" alt="">
+					</a>
+					<div class="footer-catalog">
+						<h3 class="footer-title">Каталог</h3>
+						<ul class="footer-menu">
+							<li><a href="">Кальяны</a></li>
+							<li><a href="">Колбы</a></li>
+							<li><a href="">Чаши</a></li>
+							<li><a href="">Шланги</a></li>
+							<li><a href="">Другие товары</a></li>
+						</ul>
+					</div>
+					<div class="footer-contacts">
+						<h3 class="footer-title">Контакты</h3>
+						<div class="contact-block">
+							<p>Email:</p>
+							<a href="mailto:info@bamboo-hookah.ru">info@bamboo-hookah.ru</a>
+						</div>
+						<div class="contact-block">
+							<p>Телефон:</p>
+							<a href="tel:+79654041978">+7(965)404-19-78</a>
+						</div>
+						<div class="contact-block">
+							<a href="">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none">
+								<path fill="#fff" d="M10.8135 1.95351c2.8885 0 3.2223.01457 4.369.05831 1.0596.04373 1.6256.21868 2.003.37904.508.2041.8709.43735 1.2483.81639.3774.37904.6096.7435.8128 1.25374.1452.37904.3194.96218.3774 2.01182.0581 1.1517.0581 1.487.0581 4.38809 0 2.9011-.0145 3.2364-.0581 4.3881-.0435 1.0642-.2177 1.6328-.3774 2.0118-.2032.5103-.4354.8747-.8128 1.2538-.3774.379-.7403.6123-1.2483.8164-.3774.1458-.9579.3207-2.003.379-1.1467.0583-1.4805.0583-4.369.0583-2.88841 0-3.22226-.0146-4.36893-.0583-1.05958-.0437-1.62566-.2187-2.00304-.379-.50802-.2041-.87089-.4374-1.24827-.8164-.37739-.3791-.60963-.7435-.81284-1.2538-.14514-.379-.31932-.9621-.37738-2.0118-.05806-1.1517-.05806-1.487-.05806-4.3881 0-2.90109.01452-3.23639.05806-4.38809.04355-1.06422.21772-1.63278.37738-2.01182.20321-.51024.43545-.8747.81284-1.25374.37738-.37904.74025-.61229 1.24827-.81639.37738-.14579.95797-.32073 2.00304-.37904 1.14667-.04374 1.48052-.05831 4.36893-.05831Zm0-1.95351C7.88154 0 7.50416.0145781 6.35748.0583133 5.21081.116627 4.42701.291568 3.7303.568558 3.01907.845547 2.40946 1.21001 1.81435 1.8223 1.21924 2.42002.841854 3.03231.566072 3.74665c-.261266.68519-.449959 1.487-.5080181 2.63869C-.0000053 7.53704 0 7.91607 0 10.8609c0 2.9449.0145095 3.3239.0580539 4.4756.0580591 1.1517.2322371 1.9389.5080181 2.6387.275782.7143.638658 1.3266 1.248278 1.9243.59511.5977 1.20472.9768 1.91595 1.2538.6822.2624 1.48051.4519 2.62718.5102 1.14668.0583 1.52406.0583 4.45602.0583 2.932 0 3.3094-.0146 4.4561-.0583 1.1466-.0583 1.9304-.2332 2.6272-.5102.7112-.277 1.3208-.6415 1.9159-1.2538.5951-.5977.9725-1.21 1.2483-1.9243.2613-.6852.4499-1.487.508-2.6387.0581-1.1517.0581-1.5307.0581-4.4756 0-2.94483-.0146-3.32386-.0581-4.47556-.0581-1.15169-.2322-1.93893-.508-2.63869-.2758-.71434-.6387-1.32663-1.2483-1.92435-.5951-.59771-1.2047-.976753-1.9159-1.253742-.6822-.262412-1.4806-.451931-2.6272-.5102447C14.1229.0145781 13.76 0 10.8135 0Z"/>
+								<path fill="#fff" d="M10.8137 5.27734c-3.06262 0-5.54466 2.49291-5.54466 5.56896 0 3.076 2.48204 5.5689 5.54466 5.5689 3.0626 0 5.5447-2.4929 5.5447-5.5689 0-3.07605-2.4676-5.56896-5.5447-5.56896Zm0 9.19896c-1.98853 0-3.59968-1.6182-3.59968-3.6154 0-1.99727 1.61115-3.61547 3.59968-3.61547 1.9885 0 3.5997 1.6182 3.5997 3.61547 0 1.9972-1.6112 3.6154-3.5997 3.6154ZM16.5906 6.35619c.7135 0 1.2919-.5809 1.2919-1.29748s-.5784-1.29748-1.2919-1.29748c-.7134 0-1.2918.5809-1.2918 1.29748s.5784 1.29748 1.2918 1.29748Z"/>
+							</svg>
+							</a>
+						</div>
+					</div>
+					<div class="footer-form">
+						<h3 class="footer-title">Связаться с нами!</h3>
+						<form action="">
+							<div>
+								<input type="text" name="name" placeholder="Ваше имя">
+							</div>
+							<div>
+								<input type="phone" name="phone" placeholder="Номер телефона" required>
+							</div>
+							<div class="label-block">
+								<input type="checkbox" id="privacy" name="privacy" required>
+								<label for="privacy"> 
+									<p>Согласен с Политикой конфиденциальности</p>
+								</label>
+							</div>
+							<div>
+								<button class="button" type="submit">
+									Отправить
+									<img src="./assets/arrow.svg" alt="">
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="copyright">
+					<p class="copyright-text">Copyright © 2017 Bamboo Hookah</p>
+					<a href="" class="copyright-link">Политика конфиденциальности</a>
+					<p class="copyright-text develop">Сайт разработан: <a href="">MonkeyGarden</a></p>
+				</div>
+			</div>
 		</footer>
 
+		<script src="./scripts/ts-select2.min.js"></script>
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 		<script src="./scripts/index.js"></script>
 

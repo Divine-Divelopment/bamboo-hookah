@@ -1,1 +1,298 @@
 @import 'mixins'
+
+.block-slider 
+	padding-top: 23px
+	@include tablet 
+		text-align: center
+		padding-top: 30px	
+
+.products-slider
+	--swiper-navigation-size: 20px
+	--swiper-theme-color: #000000
+	--swiper-pagination-bullet-size: 10px
+	--swiper-pagination-bullet-inactive-color: #74777E
+	--swiper-pagination-bullet-inactive-opacity: 1
+	position: relative
+	overflow: hidden
+	padding-top: 43px
+	padding-bottom: 74px
+	border-bottom: 1px solid #303030
+	@include xl
+		--swiper-theme-color: var(--accent-color)
+	@include tablet
+		padding: 10px 0 50px
+	.product-prev,
+	.product-next
+		width: 40px
+		height: 40px
+		background-color: var(--accent-color)
+		border-radius: 40px
+		display: flex
+		align-items: center
+		align-content: center
+		justify-content: center
+	.swiper-button-prev,
+	.swiper-rtl .swiper-button-next
+		left: 0
+	.swiper-button-next,
+	.swiper-rtl .swiper-button-prev
+		right: 0
+	.swiper-pagination-bullets
+		margin-top: 40px
+		justify-content: center
+.product
+	display: flex
+	flex-direction: column
+	&.discount
+		.product-image
+			&:before
+				background-image: url('../assets/discount.svg')
+	&.bamboo
+		.product-image
+			&:before
+				background-image: url('../assets/bamboo.svg')
+	&-image
+		width: 100%
+		height: 261px
+		&:before
+			content: ''
+			display: block
+			width: 34px
+			height: 34px
+			position: absolute
+			top: 0
+			left: 0
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+	&-info
+		width: 100%
+		max-width: 206px
+		margin: 26px auto 0
+	&-title
+		--h6-font-size: 16px
+		--h6-line-height: 1.5
+		--h6-font-weight: 400
+		display: -webkit-box
+		-webkit-line-clamp: 2
+		-webkit-box-orient: vertical 
+		overflow: hidden
+		text-overflow: ellipsis
+	&-price 
+		display: flex
+		align-items: center
+		align-content: center
+		margin-top: 10px
+		&-current
+			--h5-font-size: 20px
+			--h5-font-weight: 700
+			color: var(--accent-color)
+		&-new
+			--h5-font-size: 20px
+			--h5-font-weight: 700
+			color: #F35523
+			flex: 0 0 50%
+			padding-right: 5px
+		&-old
+			font-size: 14px
+			flex: 0 0 50%
+			color: #ffffff
+	.button
+		margin-top: 16px
+
+.home-text
+	padding-top: 38px
+	padding-bottom: 68px
+	@include tablet
+		text-align: center
+
+.text-wrapper
+	columns: 2
+	column-gap: 70px
+	@include xl
+		column-gap: 30px
+	@include md 
+		columns: 1
+	@include tablet
+		text-align: center
+	p
+		width: 100%
+		break-inside: avoid
+		padding-top: 30px
+
+.footer 
+	background-color: var(--background-color)
+	&-top
+		padding: 50px 0 30px
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		@include tablet
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			padding-bottom: 48px
+	&-logo
+		display: inline-block
+		@include tablet
+			display: none
+	&-title
+		--h3-font-size: 24px
+		--h3-line-height: 1
+		--h3-font-weight: 400
+	&-form,
+	&-catalog,
+	&-contacts
+		flex: 0 0 25%		
+	&-catalog
+		@include tablet
+			display: none
+		ul
+			margin: 15px 0 0 0
+			padding: 0
+			li
+				list-style-type: none
+				a
+					display: inline-block
+					font-size: 18px
+					line-height: 2.22
+					color: #A8A8A8
+					letter-spacing: 0.0818182px
+					@include has-transition(color)
+					text-decoration: none
+					&:hover
+						color: var(--accent-color)
+	&-contacts
+		@include tablet
+			display: flex
+			width: 100%
+			flex-direction: column
+			justify-content: center
+			align-content: center
+			align-items: center
+			text-align: center
+			border-bottom: 1px solid #383838
+			padding-bottom: 42px
+		.contact-block
+			margin-top: 18px
+			p
+				--p-font-size: 18px
+				--h3-line-height: 1.5
+				--h3-font-weight: 400
+				letter-spacing: 0.0818182px
+				color: #A8A8A8
+			a
+				margin-top: 3px
+				display: inline-block
+				font-size: 16px
+				line-height: 1.81
+				color: var(--accent-color)
+				letter-spacing: 0.0818182px
+				text-decoration: none
+	&-form
+		@include tablet
+			width: 100%
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-content: center
+			align-items: center
+			text-align: center
+			padding-top: 40px
+			input
+				text-align: center
+		form
+			margin-top: 15px
+			max-width: 245px
+			width: 100%
+			@include tablet
+				max-width: 100%
+				text-align: center
+			div
+				position: relative
+				&.label-block
+					display: inline-block
+					margin: 0 auto
+			button
+				margin-top: 21px
+				img
+					margin-left: 14px
+		input[type="checkbox"]
+			appearance: none
+			width: 17px
+			height: 17px
+			opacity: 0
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 99
+			cursor: pointer
+			&:checked
+				&+label
+					&::after
+						opacity: 1
+			&+label 
+				display: inherit
+				padding-left: 33px
+				cursor: pointer
+				@include tablet
+					max-width: 203px
+				p
+					--p-font-size: 14px
+					--p-line-height: 1.36
+					--p-color: #A8A8A8
+					font-size: 14px
+					line-height: 1.36
+					letter-spacing: 0.07px
+					color: #A8A8A8
+					user-select: none
+					a 
+						color: #A8A8A8
+						text-decoration: underline
+				&::before
+					content: ''
+					width: 17px
+					height: 17px
+					border: 1px solid #A8A8A8
+					box-sizing: border-box
+					border-radius: 5px
+					position: absolute
+					left: 0
+					top: 0
+				&::after
+					content: ''
+					width: 9px
+					height: 9px
+					box-sizing: border-box
+					border-radius: 3px
+					background-color: #E7C35D
+					position: absolute
+					left: 4px
+					top: 4px
+					opacity: 0	
+.copyright
+	--p-color: var(--secondary-color)
+	border-top: 1px solid #383838
+	display: flex
+	align-items: center
+	align-content: center
+	justify-content: space-between
+	padding: 22px 
+	@include tablet
+		flex-direction: column
+		justify-content: center
+		padding: 30px 0 22px
+	.develop
+		margin: 0 56px 0 90px
+		@include tablet
+			margin: 15px 0 0 0
+	p
+		--p-line-height: 1.5
+	a
+		line-height: 1.5
+		color: var(--secondary-color)
+		@include tablet
+			margin: 15px 0 0 0
+		&:hover 
+			color: var(--accent-color)
