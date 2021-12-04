@@ -31,6 +31,9 @@
 		align-items: center
 		align-content: center
 		justify-content: center
+		@include has-transition(background-color)
+		&:hover 
+			background-color: #AC8826
 	.swiper-button-prev,
 	.swiper-rtl .swiper-button-next
 		left: 0
@@ -100,6 +103,10 @@
 			color: #ffffff
 	.button
 		margin-top: 16px
+		.icon
+			width: 20px
+			height: 23px
+			margin-right: 9px
 
 .home-text
 	padding-top: 38px
@@ -216,7 +223,7 @@
 					margin: 0 auto
 			button
 				margin-top: 21px
-				img
+				.icon
 					margin-left: 14px
 		input[type="checkbox"]
 			appearance: none

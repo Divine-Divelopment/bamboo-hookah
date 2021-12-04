@@ -16,7 +16,7 @@
 	--button-text-color: #ffffff
 	--button-background-color: transparent
 	--button-border-color: #E7C35D
-	--button-text-color-hover: #ffffff
+	--button-text-color-hover: #000000
 	--button-background-color-hover: #E7C35D
 	--button-border-color-hover: #E7C35D
 
@@ -103,6 +103,8 @@ section
 ul, ol
 	list-style-position: inside
 
+.hidden 
+	display: none
 .container
 	width: 100%
 	max-width: 1270px
@@ -150,10 +152,14 @@ main
 	text-decoration: none
 	text-transform: normal
 	user-select: none
-	// &:hover
-	// 	color: var(--button-text-color-hover)
-	// 	background-color: var(--button-background-color-hover)
-	// 	border-color: var(--button-border-color-hover)
+	.icon 
+		color: var(--button-border-color) 
+	&:hover
+		color: var(--button-text-color-hover)
+		background-color: var(--button-background-color-hover)
+		border-color: var(--button-border-color-hover)
+		.icon 
+			color: var(--button-text-color-hover)
 	img 
 		margin-right: 10px
 	&.centered

@@ -171,7 +171,6 @@
 			@include tablet
 				flex-direction: column
 			li
-				margin-right: 49px
 				@include tablet
 					margin: 0
 					width: 100%	
@@ -184,6 +183,11 @@
 					line-height: 20px
 					color: var(--text-color)
 					text-decoration: none
+					padding: 14px 24px 16px
+					@include has-transition(background-color)
+					&:hover
+					&.active
+						background-color: #2D2C2C
 					@include tablet
 						display: flex
 						align-items: center
@@ -204,6 +208,9 @@
 						height: 50px
 						background-color: var(--accent-color)
 						color: #000000
+						@include has-transition(background-color)
+						&:hover 
+							background-color: #AC8826
 						@include tablet
 							width: 100%
 							height: auto
@@ -542,8 +549,8 @@
 			--button-background-color: #E7C35D
 			--button-border-color: #E7C35D
 			--button-text-color-hover: #000000
-			--button-background-color-hover: #E7C35D
-			--button-border-color-hover: #E7C35D
+			--button-background-color-hover: #AC8826
+			--button-border-color-hover: #AC8826
 		.result
 			--h3-line-height: 1.5
 			--p-line-height: 1
