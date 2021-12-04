@@ -326,11 +326,16 @@
 			&.open,
 			&.home
 				max-height: none
+			&.page
+				max-height: none
+				&>li
+					a
+						background-color: #000000
 			&.open 
 				@include tablet
 					transform: translateX(0)
 					pointer-events: visible
-			li 
+			&>li 
 				border-bottom: 0.5px solid #484848
 				&:last-child
 					border-bottom: none
@@ -347,9 +352,15 @@
 					background-color: #212121
 					text-transform: uppercase
 					font-size: 14px
-					transition: background-color ease-in-out .3s 
-					&:hover 
-						background-color: #484848
+					@include has-transition(background-color)
+					&:hover,
+					&.active
+						background-color: #323232
+				.brands
+					list-style-type: none
+					a
+						padding: 11px 20px 12px 50px
+
 .logo
 	display: flex
 	align-items: center
