@@ -57,6 +57,7 @@
 	&-image
 		width: 100%
 		height: 261px
+		position: relative
 		&:before
 			content: ''
 			display: block
@@ -305,19 +306,144 @@
 			color: var(--accent-color)
 
 .catalog
-	padding-left: 264px
+	overflow: hidden
+	padding-left: 294px
+	@include tablet
+		padding-left: 20px 
 
 .breadcrumbs 
 	padding: 54px 0 0 28px
+	@include tablet
+		padding-top: 15px
+		padding-left: 0
 	&-list
 		display: flex
+		flex-wrap: wrap
 		align-items: center
 		align-content: center
 		li
 			list-style-type: none
+			margin-right: 16px
+			a
+				display: flex
+				align-items: center
+				align-content: center
+				color: #A2A2A2
+				line-height: var(--p-line-height)
+				position: relative
+				text-decoration: none 
+				&:hover
+					color: var(--accent-color)
+				&:after
+					content: ''
+					width: 8px
+					height: 8px
+					border-bottom: solid 1px currentColor
+					border-right: solid 1px currentColor
+					-webkit-transform: rotate(-45deg)
+					transform: rotate(-45deg)
+					margin-left: 16px
+			p
+				--p-color: #B3B3B3
 
+.page-name
+	margin-top: 10px
+.brands-list
+	display: grid 
+	grid-template-columns: repeat(6, 1fr)
+	margin-top: 21px
+	margin-bottom: 20px
+	@include md
+		grid-template-columns: repeat(4, 1fr)
+	@include sm
+		grid-template-columns: repeat(2, 1fr)
+		margin-left: -21px
+		margin-right: -21px
+	.brand
+		border: 1px solid #303030
+		a
+			display: inline-block
+			width: 100%
+			padding-top: 100%
+			position: relative
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			max-width: 90%
+			max-height: 90%
+.filter
+	--p-color: #525252
+	display: inline-flex
+	align-items: center
+	margin-top: 20px
+	padding-left: 17px
+	@include tablet
+		padding-left: 0 
+	&-link
+		font-size: var(--p-font-size) 
+		color: var(--p-color)
+		text-decoration: none
+		svg
+			display: inline-block
+			margin-left: 7px
+			@include has-transition(transform)
+		&.up
+			svg
+				transform: rotateX(180deg)
+		&:hover
+			color: var(--accent-color)
+	p
+		margin-right: 33px
 .products
 	display: grid
 	gap: 50px 11px
+	width: 100%
 	grid-template-columns: repeat(4, 1fr)
-			
+	padding-bottom: 50px
+	margin-top: 27px
+	@include max
+		grid-template-columns: repeat(3, 1fr)
+	@include md
+		grid-template-columns: repeat(2, 1fr)
+	@include xs
+		gap: 40px 0
+		grid-template-columns: 1fr
+		padding-bottom: 40px
+	&-wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding-bottom: 50px
+		border-bottom: 1px solid #303030
+.full-description-block
+	padding: 37px 0
+	h3
+		margin-bottom: 30px
+		@include sm
+			--h3-font-size: 24px
+			--h3-font-weight: 500
+			--h3-line-height: 1.4
+			text-align: center
+	p
+		margin-bottom: 30px
+		@include sm
+			text-align: center
+			margin-bottom: 20px
+	ul
+		list-style-type: none
+		margin-bottom: 30px
+		@include sm
+			margin-bottom: 20px
+		li
+			p
+				margin-bottom: 0
+				@include sm
+					text-align: center
+				&:before
+					content: '– '
+.more
+	width: auto 
+	.icon
+		margin-left: 15px
