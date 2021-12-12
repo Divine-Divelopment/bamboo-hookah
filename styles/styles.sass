@@ -318,11 +318,15 @@
 .catalog
 	overflow: hidden
 	padding-left: 294px
+	.breadcrumbs 
+		padding-left: 18px
+		@include tablet
+			padding-left: 0
 	@include tablet
 		padding-left: 20px 
 
 .breadcrumbs 
-	padding: 54px 0 0 28px
+	padding: 54px 0 0
 	@include tablet
 		padding-top: 15px
 		padding-left: 0
@@ -472,8 +476,7 @@
 			justify-content: center
 		@include sm
 			flex-direction: column
-			align-items: flex-start
-			text-align: left
+			align-items: center
 	&-warning
 		--p-color: #ffffff
 		--p-line-height: 1.11
@@ -501,8 +504,6 @@
 		--p-color: var(--accent-color)
 		@include tablet
 			text-align: center
-		@include sm
-			text-align: left
 		&-for-one
 			--p-font-size: 20px
 			--p-line-height: 1
@@ -719,3 +720,78 @@
 				border-radius: 24px 0 0 24px
 			&:last-child
 				border-radius: 0 24px 24px 0
+.wholesale
+	&-info
+		padding: 20px 0 70px
+	&-wrapper
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -30px
+		@include md
+			margin: 0
+.economy,
+.how-to-buy
+	width: 50%
+	padding: 0 30px
+	@include md 
+		width: 100%
+		padding: 0
+
+.economy
+	border-right: 1px solid #303030
+	@include md
+		border-right: none
+		border-bottom: 1px solid #303030
+		padding-top: 20px
+		padding-bottom: 40px
+	&-title
+		@include sm
+			--h3-line-height: 1.44
+	&-tiles
+		display: flex
+		flex-wrap: wrap
+		margin: 17px -10px 0
+		@include sm
+			margin-right: 0
+			margin-left: 0
+	&-description
+		--p-color: #ffffff
+		margin-top: 14px
+	&-tile-wrapper
+		flex: 1 1 50%
+		padding: 0 10px
+		margin-top: 20px
+		@include sm
+			flex: 0 0 100%
+			padding: 0
+			margin-top: 10px
+	&-tile
+		text-align: center
+		border: 1px solid #E7C35D
+		padding: 17px 20px 24px
+		&-title
+			--h3-font-size: 30px
+			--h3-font-weight: 700
+			--title-color: #E7C35D
+		p
+			--p-font-size: 18px
+			--p-line-height: 1.5
+			--p-color: #ffffff
+.how-to-buy
+	@include md
+		padding-top: 40px
+	&-title
+		@include sm
+			--h3-line-height: 1.44
+	p
+		--p-font-size: 18px
+		--p-color: #ffffff
+		margin-top: 14px
+		@include sm
+			--p-font-size: 14px
+	.button
+		margin-top: 20px
+		margin-bottom: 57px
+		@include sm
+			margin-bottom: 40px
+

@@ -110,18 +110,17 @@ var SwiperSmall = new Swiper(".small-article", {
 
 const changeCount = () => {
   var count = 1;
-  var countEl = document.getElementById("count");
   const minus = document.querySelector('.minus-cart')
   const plus = document.querySelector('.plus-cart')
-  minus.addEventListener('click', function() {
+  minus.addEventListener('click', function(e) {
     if (count > 1) {
       count--;
-      countEl.value = count;
+      e.target.nextElementSibling.value = count;
     }  
   })
-  plus.addEventListener('click', function() {
+  plus.addEventListener('click', function(e) {
     count++;
-    countEl.value = count;
+    e.target.previousElementSibling.value = count;
   })
 }
 
@@ -161,7 +160,9 @@ window.addEventListener('load', function () {
     document.body.classList.remove('no-scroll')
   })
   products();
-  changeCount();
+  if (document.querySelectorAll(".count").length) {
+    changeCount();
+  }
   SwiperSmall.controller.control = SwiperBig;
   SwiperBig.controller.control = SwiperSmall;
 })
