@@ -110,17 +110,21 @@ var SwiperSmall = new Swiper(".small-article", {
 
 const changeCount = () => {
   var count = 1;
-  const minus = document.querySelector('.minus-cart')
-  const plus = document.querySelector('.plus-cart')
-  minus.addEventListener('click', function(e) {
-    if (count > 1) {
-      count--;
-      e.target.nextElementSibling.value = count;
-    }  
+  const minus = document.querySelectorAll('.minus-cart')
+  const plus = document.querySelectorAll('.plus-cart')
+  minus.forEach(function(elem) {
+    elem.addEventListener('click', function(e) {
+      if (count > 1) {
+        count--;
+        e.target.nextElementSibling.value = count;
+      }  
+    })
   })
-  plus.addEventListener('click', function(e) {
-    count++;
-    e.target.previousElementSibling.value = count;
+  plus.forEach(function(elem) {
+    elem.addEventListener('click', function(e) {
+      count++;
+      e.target.previousElementSibling.value = count;
+    })
   })
 }
 
@@ -163,6 +167,47 @@ window.addEventListener('load', function () {
   if (document.querySelectorAll(".count").length) {
     changeCount();
   }
+
+
+  if (typeof ymaps !== "undefined" && document.getElementById('map')) {
+    ymaps.ready(init);
+
+  console.log(ymaps)
+
+
+    function init() {
+      var myMap = new ymaps.Map(document.getElementById('map'), {
+        center: [55.821649, 49.087172],
+        zoom: 17,
+        controls: ["zoomControl"],
+      });
+
+      myMap.controls.add("fullscreenControl", {
+        float: "left",
+      });
+      // Создаем геообъект с типом геометрии "Точка".
+      myGeoObject = new ymaps.GeoObject();
+      myMap.behaviors.disable("scrollZoom");
+      myMap.geoObjects.add(
+        new ymaps.Placemark(
+          [55.821649, 49.087172],
+          {
+            balloonContent: 'Ул. Декабристов, 113 (вход со стороны ул. Лушникова)'
+          },
+          {
+            // Опции.
+            iconLayout: "default#image",
+            iconImageHref: './assets/pin.png',
+            iconImageSize: [30, 42],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+          }
+        )
+      );
+    }
+  }
+
   SwiperSmall.controller.control = SwiperBig;
   SwiperBig.controller.control = SwiperSmall;
 })
